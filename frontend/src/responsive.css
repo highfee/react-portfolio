@@ -1,0 +1,219 @@
+@media (max-width: 800px){
+   header ul{
+        margin-right: 50px;
+    }
+   
+   .toggle-btn{
+    top: 18px;
+   }
+   .home{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px;
+   }
+   .home>div:first-child{
+    display: none;
+   }
+   .about{
+    padding-left: 0;
+   }
+   .about-card{
+    width: 250px;
+   }
+   .work{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px 5%;
+    position: relative;
+  }
+  .works{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 40px;
+    max-width: 900px;
+    margin-left:  auto;
+    margin-right:  auto;
+  }
+  .works .left{
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+    padding: 0 5px;
+    position: relative;
+    width: 380px;
+  }
+  .works .right{
+    margin-top: 6px;
+    /* position: absolute; */
+    /* margin-left: 80px; */
+  }
+
+  .works .left::before{
+    content: '';
+    width: 100%;
+    background: var(--left-before);
+    height: .5px;
+    position: absolute;
+    bottom: 1px;
+  }
+  .my-work{
+    display: none;
+    transition: all 3s ease;
+  }
+  .active-work-details{
+    display: block !important;
+  }
+
+
+  .left button{
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: .95rem;
+    text-align: left;
+    transition: all 1s ease;
+  }
+  .active-work{
+    border-bottom: 3px solid var(--left-border) !important;
+    position: relative;
+    left: -.87px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-left: none !important;
+  }
+  .myWork div{
+    max-width: 90%;
+    margin-top: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    padding: 0 8px;
+  }
+  .contact h1{
+    font-size: 2rem;
+  }
+  .contact form{
+    min-width: 80%;
+  }
+}
+
+@media (max-width: 600px){
+    .toggle-btn{
+        right: 50px;
+        top: 22px;
+    }
+    
+    .home{
+        margin-top: 40px;
+    }
+    
+    .home .profile-image{
+        left: 50%;
+        
+    }
+   .hello{
+    transform: translate(-250px, -270px);
+   }
+   .hello+div{
+        transform: translate(-100px, 200px) !important;
+   }
+   .bar{
+    display: block !important;
+   }
+   header h1{
+    position: relative;
+    z-index: 1000;
+   }
+   header ul{
+    display: none;
+   }
+   .navbar{
+    transform: translateX(0) !important;
+   }
+   .side-nav a:hover{
+    display: inline-block;
+    color: #ddd !important;
+    transform: scale(1) !important;
+   }
+   .side-nav li {
+    width: 100%;
+    text-align: center;
+   }
+   .work{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px 5%;
+    position: relative;
+  }
+  .works{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 40px;
+    max-width: 900px;
+    margin-left:  auto;
+    margin-right:  auto;
+  }
+  .works .left{
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+    padding: 0 5px;
+    position: relative;
+    width: 380px;
+  }
+  .works .right{
+    margin-top: 6px;
+    /* position: absolute; */
+    /* margin-left: 80px; */
+  }
+
+  .works .left::before{
+    content: '';
+    width: 100%;
+    background: var(--left-before);
+    height: .5px;
+    position: absolute;
+    bottom: 1px;
+  }
+  .my-work{
+    display: none;
+    transition: all 3s ease;
+  }
+  .active-work-details{
+    display: block !important;
+  }
+
+
+  .left button{
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: .95rem;
+    text-align: left;
+    transition: all 1s ease;
+  }
+  .active-work{
+    border-bottom: 3px solid var(--left-border) !important;
+    position: relative;
+    left: -.87px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-left: none !important;
+  }
+  .myWork div{
+    max-width: 90%;
+    margin-top: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    padding: 0 8px;
+  }
+  
+}
