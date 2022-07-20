@@ -102,7 +102,7 @@
 
 @media (max-width: 600px){
     .toggle-btn{
-        right: 50px;
+        right: 65px;
         top: 22px;
     }
     
@@ -118,10 +118,13 @@
     transform: translate(-250px, -270px);
    }
    .hello+div{
-        transform: translate(-100px, 200px) !important;
+        transform: translate(-130px, 200px) !important;
    }
    .bar{
     display: block !important;
+   }
+   header{
+    padding-right: 20px;
    }
    header h1{
     position: relative;
@@ -164,6 +167,7 @@
     padding: 0 5px;
     position: relative;
     width: 380px;
+    z-index: 1000;
   }
   .works .right{
     margin-top: 6px;
@@ -185,6 +189,9 @@
   }
   .active-work-details{
     display: block !important;
+  }
+  .portfolio-item{
+    transform: translateX(-8px);
   }
 
 

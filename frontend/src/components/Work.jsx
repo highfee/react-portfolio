@@ -46,6 +46,9 @@ const Work = () => {
             <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
               Odus Computer
             </button>
+            <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
+              Odus Computer
+            </button>
             
           </div>
           <div className="right">
