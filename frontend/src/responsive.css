@@ -98,6 +98,9 @@
   .contact form{
     min-width: 87%;
   }
+  .works .left{
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px){
@@ -237,8 +240,9 @@
     display: block;
     color: var(--text-primary);
     margin: 60px auto;
+    transition: all 500ms ease;
   }
   .side-nav>a:hover{
-    transform: rotateY(30deg);
+    transform: rotateY(20deg);
   }
 }

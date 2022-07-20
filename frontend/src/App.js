@@ -24,8 +24,8 @@ function App() {
 
 
   return (
-    <div className="body"  data-theme={theme}>
-      <div className="container">
+    <div className="body"  data-theme={theme} style={{position: 'relative'}}>
+      <div className="container" style={{position: 'relative'}}>
         
         <Toggle />
         <Header />

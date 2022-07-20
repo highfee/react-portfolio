@@ -56,7 +56,7 @@
     align-items: center;
     padding: 15px;
     position: fixed;
-    top: 0;
+    top: 5px;
     background: var(--header-background);
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
     z-index: 1001;
