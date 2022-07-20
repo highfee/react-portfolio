@@ -96,7 +96,7 @@
     font-size: 2rem;
   }
   .contact form{
-    min-width: 80%;
+    min-width: 87%;
   }
 }
 
@@ -136,7 +136,7 @@
    .navbar{
     transform: translateX(0) !important;
    }
-   .side-nav a:hover{
+   .side-nav ul a:hover{
     display: inline-block;
     color: #ddd !important;
     transform: scale(1) !important;
@@ -168,6 +168,7 @@
     position: relative;
     width: 380px;
     z-index: 1000;
+    padding: 20px 0;
   }
   .works .right{
     margin-top: 6px;
@@ -181,7 +182,7 @@
     background: var(--left-before);
     height: .5px;
     position: absolute;
-    bottom: 1px;
+    bottom: 21px;
   }
   .my-work{
     display: none;
@@ -196,7 +197,7 @@
 
 
   .left button{
-    border: none;
+    border: none ;
     background: transparent;
     color: var(--text-primary);
     padding: 5px 0;
@@ -222,5 +223,22 @@
     grid-template-columns: 5% 95%;
     padding: 0 8px;
   }
-  
+   .work .swiper-pagination{
+    bottom: 0 !important;
+  } 
+  .work span{
+    margin-right: 10px;
+  }
+  .side-nav>a{
+    background: transparent;
+    
+    padding: 20px 25px;
+    width: 150px;
+    display: block;
+    color: var(--text-primary);
+    margin: 60px auto;
+  }
+  .side-nav>a:hover{
+    transform: rotateY(30deg);
+  }
 }

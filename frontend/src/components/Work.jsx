@@ -1,5 +1,8 @@
+import { useState, useEffect } from "react";
+import { Pagination, Scrollbar } from 'swiper'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import 'swiper/css/pagination';
 
-import { useState } from "react";
 
 const Work = () => {
     const style = {
@@ -8,6 +11,19 @@ const Work = () => {
             padding: '40px 10%'
         }, 
     }
+    const [viewport, setViewport] = useState('');
+
+  useEffect(() => {
+         window.addEventListener('resize', () => {
+          const {innerWidth} = window
+          setViewport(innerWidth)
+          // console.log(viewport)
+         })
+  },[viewport]);
+
+  useEffect(() => {
+      setViewport(window.innerWidth)
+  }, [])
      
    
         
@@ -36,28 +52,80 @@ const Work = () => {
         <h1 className='underline'>Where I have worked</h1>
 
         <section className="works">
-          <div className="left">
-            <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}} className = 'active-work'>
-              Khemsafe
-            </button>
-            <button onClick={() => {setTimeout(()=>{setOption(2)}, 800)}}>
-            Jose Angels
-            </button>
-            <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
-              Odus Computer
-            </button>
-            <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
-              Odus Computer
-            </button>
-            
-          </div>
+          {
+            viewport > 600 ? (
+              <div className="left">
+              <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}} className = 'active-work'>
+                Khemsafe
+              </button>
+              <button onClick={() => {setTimeout(()=>{setOption(2)}, 800)}}>
+              Jose Angels
+              </button>
+              <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
+                Odus Computer
+              </button>
+              <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
+                Odus Computer
+              </button>
+              <button onClick={() => {setTimeout(()=>{setOption(3)}, 800)}}>
+                Odus Computer
+              </button>
+              
+            </div>
+            ) : (
+              <div className="left">
+              <Swiper
+                modules={[Pagination]}
+                pagination={{ clickable: true }}
+                // scrollbar = {true}
+                // className="swiper"
+                spaceBetween={20}
+              >
+                <SwiperSlide>
+                  <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}} className = 'active-work'>
+                    Khemsafe
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}}>
+                    Jose Angels
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}}>
+                    Odus Computer
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}}>
+                    Odus Computer
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button onClick={() => {setTimeout(()=>{setOption(1)}, 800)}} >
+                    Odus Computer
+                  </button>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            )
+          }
+
+          
+
+          
+
+
+
+
+
           <div className="right">
            {option === 1 && <div className="myWork">
                   <h3>Web Dev tutor @ Khemsafe</h3>
                   <h5 style={{fontSize: '14px', marginTop: '8px'}}>April 2021 - Present</h5>
                   <div>
-                      <span>🍕</span> 
-                      <h4>I work in khemsafe a a web development tutor, where  I work with student with a variety of languages, platforms and frameworks such as Javascript, React, Gatsby, Next.JS, Express.JS, MongoDB, MongoDB Atlas, Heroku, Netlify
+                      <span>🍕 </span> 
+                      <h4> I work in khemsafe a a web development tutor, where  I work with student with a variety of languages, platforms and frameworks such as Javascript, React, Gatsby, Next.JS, Express.JS, MongoDB, MongoDB Atlas, Heroku, Netlify
                    </h4>
                   </div>
                   
@@ -66,8 +134,8 @@ const Work = () => {
                   <h3>Science Teacher @ Jose Angels College</h3>
                   <h5 style={{fontSize: '14px', marginTop: '8px'}}>2017</h5>
                   <div>
-                      <span>🍕</span> 
-                      <h4>I worked in khemsafe a a web development tutor, where  I work with student with a variety of languages, platforms and frameworks such as Javascript, React, Gatsby, Next.JS, Express.JS, MongoDB, MongoDB Atlas, Heroku, Netlify
+                      <span>🍕 </span> 
+                      <h4> I worked in khemsafe a a web development tutor, where  I work with student with a variety of languages, platforms and frameworks such as Javascript, React, Gatsby, Next.JS, Express.JS, MongoDB, MongoDB Atlas, Heroku, Netlify
                    </h4>
                   </div>
           </div>}
@@ -75,8 +143,8 @@ const Work = () => {
                   <h3>Computer Operator @ Odus Computers</h3>
                   <h5 style={{fontSize: '14px', marginTop: '8px'}}>April 2021 - Present</h5>
                   <div>
-                      <span>🍕</span> 
-                      <h4>I worked in khemsafe a a web development tutor, where  I work with student with a variety of languages, platforms and frameworks such as Javascript, React, Gatsby, Next.JS, Express.JS, MongoDB, MongoDB Atlas, Heroku, Netlify
+                      <span>🍕 </span> 
+                      <h4> I worked in khemsafe a a web development tutor, where  I work with student with a variety of languages, platforms and frameworks such as Javascript, React, Gatsby, Next.JS, Express.JS, MongoDB, MongoDB Atlas, Heroku, Netlify
                    </h4>
                   </div>
             </div>}

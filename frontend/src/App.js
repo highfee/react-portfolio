@@ -12,6 +12,7 @@ import Skills from "./components/Skills";
 import Toggle from "./components/Toggle";
 import Work from "./components/Work";
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
@@ -41,7 +42,7 @@ function App() {
         {theme === 'dark' && <Separator />}
         <div className='section' id="contact"><Contact /></div>
         <SideNav />
-        <ToastContainer />
+        <ToastContainer/>
         {/* <div style={{height: '100vh'}}></div> */}
       </div>
     </div>

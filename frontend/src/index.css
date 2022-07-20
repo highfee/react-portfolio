@@ -71,6 +71,10 @@
     gap: 10px;
     margin-right: 200px;
   }
+  header ul li:last-child{
+    margin-left: 20px;
+    margin-top: 1px;
+  }
   header ul a{
     color: var(--text-primary);
     text-decoration: none;
@@ -498,11 +502,18 @@
     padding: 0 20px;
     position: relative;
     width: 380px;
+    /* overflow-x: scroll; */
   }
   .works .right{
     margin-top: 6px;
     /* position: absolute; */
     /* margin-left: 80px; */
+  }
+  .left button{
+    min-width: max-content;
+  }
+  .swiper-slide{
+    min-width: max-content
   }
 
   .works .left::before{
@@ -546,6 +557,7 @@
     display: grid;
     grid-template-columns: 5% 95%;
   }
+  
   .contact{
     padding: 40px 10%;
     display: flex;

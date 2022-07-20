@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux'
+import cv from '../images/highfee cv.pdf'
 
 const SideNav = () => {
     const theme = useSelector(state => state.theme.value)
@@ -10,7 +11,7 @@ const SideNav = () => {
 
     const style = {
         div: {
-            background: theme==='light'? 'white' : 'rgba(0, 0, 0, .8)',
+            background: theme==='light'? 'rgba(255,255,255,.8)' : 'rgba(0, 0, 0, .8)',
             position: 'fixed',
             top: '68px',
             right: '0',
@@ -35,6 +36,9 @@ const SideNav = () => {
           fontWeight: '600',
           lineSpacing: '5px',
           cursor: 'pointer'
+        },
+        a: {
+          border: theme === 'light' ? '1px solid black' : '1px solid white'
         }
     }
   return (
@@ -47,6 +51,7 @@ const SideNav = () => {
         <li><a href="#work" style={style.links} onClick={click}>Experience</a></li>
         <li><a href="#contact" style={style.links} onClick={click}>Contact</a></li>
       </ul>
+      <a href={cv} style={style.a}>Download CV</a>
     </div>
   )
 }

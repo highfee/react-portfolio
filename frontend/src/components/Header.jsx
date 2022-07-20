@@ -1,5 +1,6 @@
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaDownload  } from 'react-icons/fa'
 import { useRef } from 'react'
+import cv from '../images/highfee cv.pdf'
 
 
 const Header = () => { 
@@ -17,6 +18,7 @@ const Header = () => {
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#work">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li title='MY RESUME'><a href={cv} download><FaDownload/></a></li>
       </ul>
       <FaBars className = 'bar' style={{fontSize: '25px', display: 'none', cursor: 'pointer'}} onClick={handleClick}/>
       

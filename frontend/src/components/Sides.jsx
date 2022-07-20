@@ -10,7 +10,7 @@ const Sides = () => {
             justifyContent: "space-between",
             position: 'fixed',
             width: '100vw',
-            padding: '0 30px 0 20px' ,
+            padding: '0 30px 0 10px' ,
             top: '50%',
             transform: 'translate(0, -50%)',
             // zIndex: '998'
