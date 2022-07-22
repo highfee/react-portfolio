@@ -10,9 +10,11 @@ import boot from '../images/bootstrap.png'
 import python from '../images/python.png'
 import mongo from '../images/mongo.png'
 import web from '../images/web.png'
+import highfee from '../images/highfee.png'
 import HomeBackground from '../images/home.png'
 import { FaCheckCircle } from 'react-icons/fa'
 import { useRef } from 'react'
+
 
 const Home = () => {
   const theme = useSelector(state => state.theme.value)
@@ -82,7 +84,7 @@ const Home = () => {
         </div>
         <div className="profile-image">
           <div className="circle" id={elementVisible?'profile-circle':''}></div>
-          <img src={image} alt="" id={elementVisible?'profile-image':''}/>
+          <img src={highfee} alt="" id={elementVisible?'profile-image':''}/>
         </div>
         <div>
           <div className="card hello" id={elementVisible?'profile-image':''}>

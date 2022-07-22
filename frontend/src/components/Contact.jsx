@@ -7,22 +7,31 @@ import { toast } from 'react-toastify'
 const Contact = () => {
   const theme = useSelector(state => state.theme.value)
   const form = useRef();
+  const btn = useRef()
   const [loading, SetLoading] = useState(false)
 
   const sendEmail = async (e) => {
     e.preventDefault();
     SetLoading('Sending......')
+    btn.current.disabled = true
     try {
       const res = await emailjs.sendForm('service_25w4cla', 'template_qprrztq', form.current, 'Z7N6Vq2E2V9j0HbJg')
       if(res){
         SetLoading('Sent')
+        btn.current.disabled = false
+      }else{
+          SetLoading('Try again')
+          toast.error('Pls check internet connection')
       }
     } catch (error) {
         if(error.status === 0){
+          toast.error('Pls check internet connection')
+          btn.current.disabled = false
+        }
+        if(!error){
           SetLoading('Try again')
           toast.error('Pls check internet connection')
         }
-        console.log(error.status);
     }
 
     
@@ -71,6 +80,7 @@ const Contact = () => {
             type="submit" 
             value={loading || 'Say Hello'} 
             style={style.button}
+            ref={btn}
           />
         </div>
         

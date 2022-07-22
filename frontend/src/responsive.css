@@ -16,7 +16,7 @@
   
 }
 
-@media (max-width: 800px) and (min-width: 650px){
+@media (max-width: 800px) and (min-width: 600px){
    header ul{
         margin-right: 50px;
     }
@@ -147,6 +147,7 @@
     }
    .hello{
     transform: translate(-250px, -270px);
+    width: 80%;
    }
    .hello+div{
         transform: translate(-130px, 200px) !important;
@@ -181,6 +182,11 @@
     margin-bottom: 50px;
     padding: 40px 5%;
     position: relative;
+  }
+  .portfolio-item{
+    width: 270px !important;
+    min-width: 250px !important;
+    transform: translateX(-25px) !important;
   }
   .works{
     display: flex;
@@ -256,7 +262,11 @@
   }
    .work .swiper-pagination{
     bottom: 0 !important;
+    transform: translateX(-30px);
   } 
+  .work .swiper-pagination span:not(:nth-child(1), :nth-child(2)){
+    display: none;
+  }
   .work span{
     margin-right: 10px;
   }
@@ -272,5 +282,13 @@
   }
   .side-nav>a:hover{
     transform: rotateY(20deg);
+  }
+  .contact form{
+    min-width: 87%;
+  }
+   .email{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90%;
   }
 }
